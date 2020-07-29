@@ -1,0 +1,708 @@
+
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Mr+Dafoe|Open+Sans+Condensed:300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html,body {
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  outline:none;
+}
+
+#main {
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background: url('brown-and-black-wooden-wind-mill-1036148.jpg');
+  background-size: cover;
+
+}
+.cloud{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("cloud(1).png");
+  animation: animate 6s linear infinite;
+  z-index: 1;
+
+}
+
+/*HEADER ----------------------------------------------- */
+
+#header {
+  width: 100%;
+  height: 15%;
+  padding: 6%;
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+
+#ROCK_title {
+  font-family: 'Luckiest Guy', cursive;
+  margin-left: 10px;
+  margin-right: 25px;
+}
+
+#PAPER_title {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+#Scissors_title {
+  font-family: 'Mr Dafoe',cursive;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+/*Start Page ---------------------------------- */
+.content-box {
+  width: 100%;
+  height: 85%;
+}
+
+#start_page {
+  padding: 1em 4em;
+  position: relative;
+  margin: -3em 0 12em 0;
+  z-index: 100;
+
+}
+
+.start_page_buttons {
+  letter-spacing: 0.2em;
+  text-transform: capitalize;
+  font-weight:bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px black;
+  z-index: 1;
+  width: 200px;
+  height: 50px;
+  margin: 3em 20px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #005b8e;
+}
+
+/* rules box ----------- */
+
+#rules_container {
+  z-index: 2;
+  width: 35rem;
+  height: 21rem;
+  background-image: linear-gradient(to left bottom, #051937, #004c77, #0086a9, #00c3c1, #00ffbc);
+  position: absolute;
+  top: -20px;
+  visibility: hidden;
+  border-radius: 50px;
+}
+
+#rc_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.rc_c_items {
+  width:100%;
+  color: #000;
+}
+.rc_c_items p:last-of-type{
+  font-weight: bold;
+  color:#e00;
+}
+
+#rc_c_item_one {
+  height: 15%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#rc_c_item_two {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.game_rules {
+  letter-spacing: 1.2px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.5em;
+}
+.game_rules{
+  border-bottom:3px solid #fff;
+  padding: 10px;
+}
+
+#rc_exit_button {
+  padding: 12px 20px;
+  font-weight: 800;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+
+#rc_exit_button:hover {
+  color: red;
+  border-color: red;
+}
+
+/* new game input box -------------------------------------  */
+
+#new_game_container {
+  z-index: 2;
+  width: 30rem;
+  height: 25rem;
+  background-image: linear-gradient(to left bottom, #051937, #004c77, #0086a9, #00c3c1, #00ffbc);
+  border: 1px solid black;
+  position: absolute;
+  top: 10px;
+  visibility: hidden;
+  border:3px solid #0a0937;
+  border-radius: 60px;
+
+}
+.game_option{
+  z-index: 2;
+  width: 35rem;
+  height: 30rem;
+  background-color: orange;
+  border: 1px solid black;
+  position: absolute;
+  top: 140;
+}
+
+#ngc_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#ngcc_header {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+#ngcc_title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.1em;
+  letter-spacing: 12px;
+  margin-left: 30px;
+}
+
+#ngcc_exit_button {
+  align-self: flex-start;
+  padding: 12px 20px;
+  font-weight: 800;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  position:absolute;
+  left: 414px;
+  top: 0px;
+  border-radius: 0px 90px 10px 10px;
+}
+
+#ngcc_exit_button:hover {
+  color: red;
+  border-color: red;
+}
+
+#ngcc_user_input {
+  height: 20%;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 0 22px;
+}
+
+label[for="ngcc_username"] {
+  font-weight: bold;
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-size: 2em;
+}
+
+input[id="ngcc_username"] {
+  padding: 10px 27px;
+  margin-left: 22px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  font-size: 19px;
+  text-transform: capitalize;
+}
+}
+
+input[id="ngcc_username"]:active, input[id="ngcc_username"]:focus {
+  color: yellow;
+  border-color: yellow;
+}
+
+#ngcc_rounds {
+  height: 24%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+#ngcc_rounds_title {
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-size: 2em;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  left: 23px;
+}
+
+
+#ngcc_start {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start_game_button {
+  width: 40%;
+  height: 3rem;
+  padding: 0px;
+  border: 3px solid black;
+  background-color: black;
+  color: white;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-left:20px
+}
+
+#start_game_button:hover {
+  border-color:yellow;
+}
+
+/*  GAME PAGE ------------------------------ */
+#game_page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 80px;
+}
+#reagain {
+  font-size: 22px;
+  background-color: #00e7ff;
+  border: none;
+  padding: 8px -1px;
+  position: absolute;
+  border-radius: 10px;
+  padding: 8px 15px;
+  text-transform: capitalize;
+  font-weight: bold;
+  visibility: visible;
+  cursor: pointer;
+
+}
+#reagain:hover{
+  box-shadow:2px 3px 13px #00eaea ;
+}
+
+  .reagain_button {
+    position: relative;
+    z-index: 100;
+    top: -55px;
+    left: 45px;
+}
+
+
+#game_page_header {
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#computer_logo {
+  width: 120px;
+  height: 120px;
+  margin-right: 100px;
+}
+
+#player_name {
+  font-size: 2.2em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-left: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+
+#VS img{
+  width: 150px;
+}
+
+#main_game {
+  height: 78%;
+  display: flex;
+}
+
+.mg_items {
+  height: 100%;
+}
+.left_image{
+  width: 20%;
+  position: relative;
+  height: 0;
+  top: 11em;
+z-index: 100;
+}
+#mg_left_side {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#mg_left_side img{
+  object-fit: contain;
+}
+#mg_center {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#mg_c_header {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+}
+
+#mg_c_h_rounds_title {
+  font-size: 2em;
+  letter-spacing: 2px;
+  font-family: 'Open Sans Condensed',sans-serif;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  color: black;
+  background-color: white;
+  margin: -82px;
+  z-index: 100;
+  height: 80px;
+  border-right: 3px solid #000;
+  border-left: 3px solid #000;
+  border-top: 3px solid #000;
+}
+
+
+#round_number {
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Open Sans Condensed',sans-serif;
+  text-transform: uppercase;
+  color:black;
+}
+
+
+
+#mg_c_c_center {
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+
+
+#mg_c_left_score {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 2px solid #000;
+}
+
+#mg_c_ls_score {
+  margin-bottom: 35px;
+  font-size: 1.9em;
+  font-family: 'Open Sans Condensed', cursive;
+  font-style: italic;
+  margin-right: 20px;
+}
+
+#mg_c_ls_n {
+  font-size: 6em;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Luckiest Guy', cursive;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
+#mg_c_center_result {
+  width:70%;
+  height: 100%;
+  border-top: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mg_c_c_r_text {
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+
+#mg_c_right_score {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 2px solid #000;
+}
+
+#mg_c_rs_score {
+  margin-bottom: 35px;
+  font-size: 1.9em;
+  font-family: 'Open Sans Condensed', cursive;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+#mg_c_rs_n {
+  font-size: 6em;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Luckiest Guy', cursive;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+#mg_c_result_footer {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#mgcrf_container {
+  border-top: 3px dotted black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 71%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+#mgcrf_container > h4 {
+  font-size: 1.6em;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.right_image{
+  width: 20%;
+  height: 0%;
+  position: relative;
+  top: 11em;
+}
+
+#mg_right_side {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#mg_right_side img{
+  object-fit: contain;
+}
+.gm_buttons {
+  width: 120px;
+  height: 120px;
+  border: 5px solid black;
+  border-radius: 100%;
+  cursor: pointer;
+  margin:7px
+}
+
+.gm_c_buttons {
+  width: 120px;
+  height: 120px;
+  border: 5px solid black;
+  border-radius: 100%;
+  cursor: pointer;
+  margin:7px
+}
+
+#footer {
+  height: 2%;
+}
+
+.footer_buttons {
+  display: none;
+  margin-left: 10px;
+  margin-right: 20px;
+  padding: 10px 10px;
+  color: black;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: orange;
+  border: 1px solid black;
+  font-weight:bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px black;
+  z-index: 1;
+}
+/*THE WIN PAGE-----------------------------------*/
+
+#the_win{
+  width: 100%;
+  height: 120vh;
+  position: absolute;
+  visibility: hidden;
+  background-image: linear-gradient(to left bottom, #051937, #004c77, #0086a9, #00c3c1, #00ffbc);
+  top:0;
+  margin-top:-100px
+}
+.theWinContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+  width: 100%;
+}
+#h2_winner {
+  font-size: 26px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 30px;
+}
+
+.winner-declare{
+  display: flex;
+}
+.winner-declare img{
+  width: 89px;
+  z-index: 100;
+}
+
+#player_name2 {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  padding: 40px;
+  position: relative;
+  z-index: 100;
+}
+
+#game_again {
+  font-size: 22px;
+  text-transform: capitalize;
+  background-color:#00eaea;
+  border: none;
+  border-radius: 11px;
+  padding: 13px 45px;
+  font-weight: bold;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+#game_again:hover {
+   box-shadow:2px 3px 13px #00eaea ;
+}
+
+h1{
+  animation: animate linear 1s;
+}
+@keyframes animate{
+  0% {
+    opacity: 0;
+    transform: rotateY(70deg);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0);
+  }
+}
+
+
+/* ADDITIONAL------------------------------------------- */
+
+.start_page_buttons:hover {
+  box-shadow: 3px 3px 5px 3px #006ea4;
+}
+
+
+.footer_buttons:hover {
+  box-shadow: 3px 3px 5px 3px #006ea4;
+}
+
+
+.rounds_active {
+  border-color: yellow;
+}
+
+.select_btn_active {
+  border-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.won_btn_active  {
+  border-color: lime;
+}
+
+.lost_btn_active {
+  border-color: red;
+}
+
+.draw_btn_active {
+  border-color: gray;
+}
